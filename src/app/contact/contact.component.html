@@ -1,0 +1,10 @@
+<app-card [title]="'Contacts'">
+  <mat-list class="list">
+    <mat-list-item *ngFor="let contact of contacts" fxLayout="row" fxLayoutGap="20px">
+      <img src="assets/img/{{ contact.icon }}"/>
+      <!-- <div mat-line>{{contact.name}}</div> -->
+      <a [href]="contact.link" target="_blank" fxFlex=90>{{ contact.value }}</a>
+    </mat-list-item>
+    <!-- <mat-divider></mat-divider> -->
+  </mat-list>
+</app-card>

@@ -1,0 +1,18 @@
+<div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap.gt-sm="20px">
+  <div fxFlex="25">
+    <app-name></app-name>
+    <app-contact></app-contact>
+    <app-hobby></app-hobby>
+    <app-skill></app-skill>
+  </div>
+  <div fxFlex="75">
+    <app-about-me></app-about-me>
+    <app-education [arr]="experience" [title]="'Experiences'"></app-education>
+    <app-education
+      [arr]="education"
+      [title]="'Education Qualification'"
+      class="education"
+    ></app-education>
+    <app-education [arr]="projects" [title]="'Project'" class="project"></app-education>
+  </div>
+</div>

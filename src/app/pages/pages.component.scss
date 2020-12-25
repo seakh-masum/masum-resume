@@ -1,0 +1,50 @@
+::ng-deep {
+  .mat-step-icon {
+    // width: 134px !important;
+    // height: 30px !important;
+    // padding: 5px;
+    // border-radius: 0 20px 20px 0 !important;
+    &-content {
+      // display: none;
+    }
+    // &:before {
+    //   content: '2012-2013';
+    //   padding-left: 7px;
+    // }
+
+
+    // &[aria-posinsite='1'] {
+    //   &:before {
+    //     content: '2016-2019' !important;
+    //   }
+    // }
+    // &[aria-posinsite='2'] {
+    //   &:before {
+    //     content: '2014-2016' !important;
+    //   }
+    // }
+    // &[aria-posinsite='3'] {
+    //   &:before {
+    //     content: '2012-2014' !important;
+    //   }
+    // }
+  }
+
+  // .mat-stepper-vertical-line::before {
+  //   left: -43px !important;
+  // }
+
+  // .mat-vertical-content-container {
+  //   margin-left: 108px !important;
+  // }
+
+}
+
+img {
+  // width: 100px;
+  // height: 100px;
+}
+
+.mat-card {
+  margin-bottom: 20px;
+}

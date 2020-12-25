@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "masum-cv"
+  },
+  "targets": {
+    "masum-cv": {
+      "hosting": {
+        "masum-resume": [
+          "masum-cv"
+        ]
+      }
+    }
+  }
+}
