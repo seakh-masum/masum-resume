@@ -8,16 +8,18 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { PagesComponent } from './pages/pages.component';
 import { SharedModule } from './shared/shared.module';
-import { EducationComponent } from './education/education.component';
-import { ExperienceComponent } from './experience/experience.component';
-import { SocialComponent } from './social/social.component';
-import { HobbyComponent } from './hobby/hobby.component';
-import { ContactComponent } from './contact/contact.component';
-import { SkillComponent } from './skill/skill.component';
-import { ProjectComponent } from './project/project.component';
-import { CardComponent } from './card/card.component';
-import { AboutMeComponent } from './about-me/about-me.component';
-import { NameComponent } from './name/name.component';
+import { EducationComponent } from './components/education/education.component';
+import { ExperienceComponent } from './components/experience/experience.component';
+import { SocialComponent } from './components/social/social.component';
+import { HobbyComponent } from './components/hobby/hobby.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { SkillComponent } from './components/skill/skill.component';
+import { ProjectComponent } from './components/project/project.component';
+import { CardComponent } from './components/card/card.component';
+import { AboutMeComponent } from './components/about-me/about-me.component';
+import { NameComponent } from './components/name/name.component';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [
@@ -32,13 +34,15 @@ import { NameComponent } from './name/name.component';
     ProjectComponent,
     CardComponent,
     AboutMeComponent,
-    NameComponent
+    NameComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     NgbModule,
     SharedModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFirestoreModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],

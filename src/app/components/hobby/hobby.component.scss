@@ -1,0 +1,12 @@
+.mat-chip {
+  img {
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+    margin-right: 5px;
+  }
+  color: #fff;
+  &-list-wrapper {
+    margin: 0 !important;
+  }
+}

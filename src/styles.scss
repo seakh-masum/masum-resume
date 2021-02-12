@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
-@import "@angular/material/prebuilt-themes/deeppurple-amber.css";
+// @import "@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import './styles/themes.scss';
 
 html {
   height: 100%;
@@ -7,8 +8,8 @@ html {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
-  background-color: #e0e0e0;
-  padding: 10px;
+  background-color: #f5f5f5;
+  // padding: 10px;
 }
 p {
   margin: 0 !important;

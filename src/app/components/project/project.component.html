@@ -1,0 +1,9 @@
+<app-card [title]="'Projects'">
+  <ul>
+    <li *ngFor="let item of projects">
+      <b>{{item.title}}</b>
+      <p>{{item.desc}}</p>
+      <i>{{item.link}}</i>
+    </li>
+  </ul>
+</app-card>
