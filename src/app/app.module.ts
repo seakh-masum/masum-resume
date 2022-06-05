@@ -20,6 +20,9 @@ import { AboutMeComponent } from './components/about-me/about-me.component';
 import { NameComponent } from './components/name/name.component';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { ColorDirective } from './directives/color.directive';
+import { StepperComponent } from './components/stepper/stepper.component';
+import { CircleProgressComponent } from './components/circle-progress/circle-progress.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +38,9 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
     CardComponent,
     AboutMeComponent,
     NameComponent,
+    ColorDirective,
+    StepperComponent,
+    CircleProgressComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,9 +49,11 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
     SharedModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+    }),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -1,6 +1,6 @@
 export class Skill {
   id?: string;
-  icon?: string;
-  value?: number;
-  color?: string;
+  icon?: any;
+  value?: any;
+  color?: any;
 }

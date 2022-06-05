@@ -1,9 +1,9 @@
 <app-card [title]="'Projects'">
-  <ul>
-    <li *ngFor="let item of projects">
+  <ul class="projects" ngClass.lt-sm="projects__mobile">
+    <li class="projects__box" *ngFor="let item of projects">
       <b>{{item.title}}</b>
       <p>{{item.desc}}</p>
-      <i>{{item.link}}</i>
+      <!-- <i>{{item.link}}</i> -->
     </li>
   </ul>
 </app-card>

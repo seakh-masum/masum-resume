@@ -1,37 +1,8 @@
-<mat-card>
-  <mat-card-header>
-    <mat-card-title>Skills</mat-card-title>
-  </mat-card-header>
-  <mat-card-content>
-    <div fxLayout="row wrap">
-      <div
-        *ngFor="let item of skills"
-        [fxFlex]="33.3"
-        fxLayoutAlign="center center"
-      >
-        <!-- <div class="c100 small" [ngClass]="'p'+item.value">
-          <span>{{item.name}}</span>
-          <div class="slice">
-            <div class="bar"></div>
-            <div class="fill"></div>
-          </div>
-        </div> -->
-        <circle-progress
-          [percent]="item.value"
-          [radius]="35"
-          [outerStrokeWidth]="8"
-          [innerStrokeWidth]="8"
-          [outerStrokeColor]="item.color"
-          [innerStrokeColor]="'#e7e8ea'"
-          [animation]="true"
-          [animationDuration]="1000"
-          [space]="-5"
-          [showImage]="true"
-          [imageHeight]="40"
-          [imageWidth]="40"
-          [imageSrc]="item.icon"
-        ></circle-progress>
-      </div>
+<app-card title="Skills">
+  <div fxLayout="row wrap">
+    <div *ngFor="let item of skills" fxFlex="33.3" fxLayoutAlign="center center">
+      <app-circle-progress [outerColor]="item.color" [imageSrc]="item.icon" [title]="item.id" [percentage]="item.value">
+      </app-circle-progress>
     </div>
-  </mat-card-content>
-</mat-card>
+  </div>
+</app-card>

@@ -1,0 +1,13 @@
+<div class="stepper__container">
+  <div class="stepper" *ngFor="let item of data; let i=index">
+    <div class="stepper__pointer">
+      <div class="stepper__circle">{{i + 1}}</div>
+      <div *ngIf="i+1 != data.length" class="stepper__line"></div>
+    </div>
+    <div class="stepper__text-container">
+      <h1>{{item.heading}}</h1>
+      <h3>{{item.sub_heading}}</h3>
+      <h5>{{item?.description}}</h5>
+    </div>
+  </div>
+</div>

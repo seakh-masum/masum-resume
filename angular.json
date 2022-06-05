@@ -56,7 +56,7 @@
                 {
                   "type": "initial",
                   "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumError": "1.5mb"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -113,9 +113,7 @@
               "tsconfig.spec.json",
               "e2e/tsconfig.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "e2e": {
@@ -137,5 +135,8 @@
       }
     }
   },
-  "defaultProject": "masum-resume"
+  "defaultProject": "masum-resume",
+  "cli": {
+    "analytics": "ffe9efc5-d5d7-4466-a3a5-445a7a41c6e3"
+  }
 }

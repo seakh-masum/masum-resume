@@ -1,9 +1,3 @@
 <app-card [title]="'Education Qualification'">
-  <ul>
-    <li *ngFor="let item of education">
-      <b>{{item.course}}</b>
-      <p>{{item.institute}}</p>
-      <i>{{item.marks}} %</i>
-    </li>
-  </ul>
+  <app-stepper [data]="stepperArr"></app-stepper>
 </app-card>

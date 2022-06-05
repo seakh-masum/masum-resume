@@ -1,9 +1,3 @@
 <app-card [title]="'Experiences'">
-  <ul>
-    <li *ngFor="let item of experience">
-      <b>{{item.company}}</b>
-      <p>{{item.from}} - {{item.to}}</p>
-      <i>{{item.difference}}</i>
-    </li>
-  </ul>
+  <app-stepper [data]="stepperArr"></app-stepper>
 </app-card>
