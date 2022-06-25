@@ -1,8 +1,16 @@
 <app-card [title]="'Contacts'">
   <div class="list">
-    <div class="list__item" *ngFor="let contact of contacts">
-      <img class="list__image" src="{{ contact.icon }}" />
-      <a class="list__title" [href]="contact.link" target="_blank">{{ contact.value }}</a>
-    </div>
+    <a
+      class="list__item"
+      [href]="contact.link"
+      target="_blank"
+      *ngFor="let contact of contacts"
+      [style.background]="contact.color"
+    >
+      <img
+        class="list__image"
+        [class.mobile]="isMobileDevice"
+        [src]="contact.icon"
+    /></a>
   </div>
 </app-card>

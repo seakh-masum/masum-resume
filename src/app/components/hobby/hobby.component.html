@@ -1,7 +1,12 @@
-<app-card [title]="'Hobbies'">
+<app-card title="Hobbies">
   <div class="chip__wrapper">
-    <div class="chip" *ngFor="let item of hobbies" [ngClass]="'color__'+ item.color">
-      <img src="{{item.icon}}" /> {{item.name}}
+    <div
+      class="chip"
+      [class.mobile]="isMobileDevice"
+      *ngFor="let item of hobbies"
+      [ngClass]="'color__' + item.color"
+    >
+      <img src="{{ item.icon }}" /> {{ item.name }}
     </div>
   </div>
 </app-card>

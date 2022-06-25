@@ -7,6 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class StepperComponent implements OnInit {
   @Input() data: any[] = [];
+  @Input() isMobileDevice = false;
 
   constructor() {}
 

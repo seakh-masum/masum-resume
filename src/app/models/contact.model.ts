@@ -1,6 +1,7 @@
-export class Contact {
-  id?: string;
+export interface Contact {
+  id: string;
   link?: string;
   value?: string;
-  icon?: string;
+  icon: string;
+  color?: string;
 }

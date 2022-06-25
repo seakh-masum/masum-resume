@@ -1,62 +1,49 @@
 {
-  "name": "masum-resume",
-  "short_name": "masum-resume",
-  "theme_color": "#1976d2",
+  "name": "Masum Resume",
+  "short_name": "Masum CV",
   "background_color": "#fafafa",
   "display": "standalone",
   "scope": "./",
   "start_url": "./",
   "icons": [
     {
-      "src": "assets/icons/android-icon-72x72.png",
+      "src": "https://res.cloudinary.com/ruhi-birthday/image/upload/v1655623019/masum-cv/icons/android-icon-72x72_pecbtv.png",
       "sizes": "72x72",
       "type": "image/png",
       "purpose": "maskable any"
     },
     {
-      "src": "assets/icons/android-icon-96x96.png",
+      "src": "https://res.cloudinary.com/ruhi-birthday/image/upload/v1655623020/masum-cv/icons/android-icon-96x96_wbotvk.png",
       "sizes": "96x96",
       "type": "image/png",
       "purpose": "maskable any"
     },
     {
-      "src": "assets/icons/icon-128x128.png",
-      "sizes": "128x128",
-      "type": "image/png",
-      "purpose": "maskable any"
-    },
-    {
-      "src": "assets/icons/android-icon-144x144.png",
+      "src": "https://res.cloudinary.com/ruhi-birthday/image/upload/v1655623020/masum-cv/icons/android-icon-144x144_qwdbs9.png",
       "sizes": "144x144",
       "type": "image/png",
       "purpose": "maskable any"
     },
     {
-      "src": "assets/icons/icon-152x152.png",
-      "sizes": "152x152",
-      "type": "image/png",
-      "purpose": "maskable any"
-    },
-    {
-      "src": "assets/icons/icon-192x192.png",
+      "src": "https://res.cloudinary.com/ruhi-birthday/image/upload/v1655623017/masum-cv/icons/icon-192x192_mh7yxe.png",
       "sizes": "192x192",
       "purpose": "maskable any",
       "type": "image/png"
     },
     {
-      "src": "assets/icons/icon-256x256.png",
+      "src": "https://res.cloudinary.com/ruhi-birthday/image/upload/v1655623018/masum-cv/icons/icon-256x256_w2vz3t.png",
       "sizes": "256x256",
       "type": "image/png",
       "purpose": "maskable any"
     },
     {
-      "src": "assets/icons/icon-384x384.png",
+      "src": "https://res.cloudinary.com/ruhi-birthday/image/upload/v1655623018/masum-cv/icons/icon-384x384_rc8qft.png",
       "sizes": "384x384",
       "type": "image/png",
       "purpose": "maskable any"
     },
     {
-      "src": "assets/icons/icon-512x512.png",
+      "src": "https://res.cloudinary.com/ruhi-birthday/image/upload/v1655623018/masum-cv/icons/icon-512x512_zk9nyy.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable any"

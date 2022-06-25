@@ -1,7 +1,12 @@
 <app-card title="Skills">
-  <div fxLayout="row wrap">
-    <div *ngFor="let item of skills" fxFlex="33.3" fxLayoutAlign="center center">
-      <app-circle-progress [outerColor]="item.color" [imageSrc]="item.icon" [title]="item.id" [percentage]="item.value">
+  <div class="flex__row flex__wrap">
+    <div *ngFor="let item of skills" class="flex__33 align__center-center">
+      <app-circle-progress
+        [outerColor]="item.color"
+        [imageSrc]="item.icon"
+        [title]="item.name"
+        [percentage]="item.value"
+      >
       </app-circle-progress>
     </div>
   </div>

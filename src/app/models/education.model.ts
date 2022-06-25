@@ -1,6 +1,8 @@
-export class Education {
-  id?: string;
+export interface Education {
+  id: string;
   course?: string;
   institute?: string;
-  marks?: number; 
+  marks?: number;
+  from?: string;
+  to?: string;
 }

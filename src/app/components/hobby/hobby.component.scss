@@ -14,6 +14,9 @@
   transform: translateZ(0);
   border: none;
   -webkit-appearance: none;
+  &.mobile {
+    font-size: 0.875rem;
+  }
 
   &::after {
     top: 0;

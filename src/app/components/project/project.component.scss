@@ -4,17 +4,17 @@
   gap: 20px;
   grid-template-columns: repeat(3, 1fr);
   &__box {
-    background-color: #f3f3f3;
+    background-color: var(--surface-color);
     list-style: none;
     padding: 10px 15px;
     border-radius: 8px;
     margin-bottom: 0;
     b {
-      color: #000;
+      color: var(--text-color);
       font-size: 16px;
     }
     p {
-      color: #505050;
+      color: var(--desc-color);
       font-size: 11px;
     }
   }

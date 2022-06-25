@@ -1,16 +1,30 @@
 import { Injectable } from '@angular/core';
-import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
-import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from '@angular/fire/firestore';
-import { Education } from '../models/education.model';
+import {
+  AngularFirestore,
+  AngularFirestoreCollection,
+} from '@angular/fire/firestore';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class GenericService {
-
   constructor(private _db: AngularFirestore) {}
 
   getAll(collection: any): AngularFirestoreCollection {
     return this._db.collection(collection);
+  }
+  checkDeviceTypeMobile(): boolean {
+    return window.innerWidth <= 700 && window.innerHeight <= 900 ? true : false;
+  }
+
+  checkDarkMode() {
+    let isDarkMode = false;
+    if (
+      window.matchMedia &&
+      window.matchMedia('(prefers-color-scheme: dark)').matches
+    ) {
+      isDarkMode = true;
+    }
+    return isDarkMode;
   }
 }

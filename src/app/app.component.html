@@ -1,4 +1,35 @@
-<div class="mat-app-background">
-  <app-pages></app-pages>
+<div class="background">
+  <div class="flex__row gap-3" [class.flex__column]="isMobileDevice">
+    <div class="flex__33">
+      <app-name data-inviewport="fade-rotate"></app-name>
+      <app-contact
+        data-inviewport="fade-rotate"
+        [isMobileDevice]="isMobileDevice"
+        [isDarkMode]="isDarkMode"
+        [contacts]="contacts"
+      ></app-contact>
+      <app-hobby
+        data-inviewport="fade-rotate"
+        [isMobileDevice]="isMobileDevice"
+        [hobbies]="hobbies"
+      ></app-hobby>
+      <app-skill data-inviewport="fade-rotate" [skills]="skills"></app-skill>
+    </div>
+    <div class="flex__67">
+      <app-about-me data-inviewport="fade-rotate"></app-about-me>
+      <app-experience
+        data-inviewport="fade-rotate"
+        [isMobileDevice]="isMobileDevice"
+      ></app-experience>
+      <app-education
+        data-inviewport="fade-rotate"
+        [isMobileDevice]="isMobileDevice"
+      ></app-education>
+      <app-project
+        data-inviewport="fade-rotate"
+        [isMobileDevice]="isMobileDevice"
+        [projects]="projects"
+      ></app-project>
+    </div>
+  </div>
 </div>
-

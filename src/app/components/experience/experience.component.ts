@@ -1,24 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { map } from 'rxjs/operators';
 import { Experience } from '../../models/experience.model';
 import { GenericService } from '../../services/generic.service';
 import * as moment from 'moment';
-import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
 
 @Component({
   selector: 'app-experience',
   templateUrl: './experience.component.html',
   styleUrls: ['./experience.component.scss'],
-  providers: [
-    {
-      provide: STEPPER_GLOBAL_OPTIONS,
-      useValue: { displayDefaultIndicatorType: false },
-    },
-  ],
 })
 export class ExperienceComponent implements OnInit {
   experience?: Experience[];
   stepperArr: any[] = [];
+  @Input() isMobileDevice = false;
 
   constructor(private _generic: GenericService) {}
 
@@ -36,19 +30,34 @@ export class ExperienceComponent implements OnInit {
       )
       .subscribe((data) => {
         this.experience = data.map((item: Experience) => {
-          // console.log(item);
-
           let obj: any = {};
           obj.company = item.company;
+          obj.role = item.role;
           obj.from = moment(item.from).format('MMM YYYY');
+          let startYear = moment(item.from).format('YYYY');
+          let endYear;
           if (item.to == 'Present') {
+            endYear = 'Present';
             obj.to = moment(new Date()).format('MMM YYYY');
           } else {
+            endYear = moment(item.to).format('YYYY');
             obj.to = moment(item.to).format('MMM YYYY');
           }
-          obj.difference = moment([item.to]).diff(moment([item.from]), 'years');
-          // console.log(obj);
 
+          let startDate = moment(obj.from, 'MMM YYYY');
+          let endDate = moment(obj.to, 'MMM YYYY');
+
+          let years = endDate.diff(startDate, 'year');
+          startDate.add(years, 'years');
+
+          let months = endDate.diff(startDate, 'months');
+          startDate.add(months, 'months');
+
+          obj.difference =
+            years > 0 ? `${years} Years ${months} Months` : `${months} Months`;
+
+          obj.tenure =
+            startYear == endYear ? startYear : `${startYear} - ${endYear}`;
           return obj;
         });
         this.makeStepperArr();
@@ -57,10 +66,12 @@ export class ExperienceComponent implements OnInit {
 
   makeStepperArr() {
     if (this.experience && this.experience.length > 0) {
-      this.stepperArr = this.experience.map((item: Experience) => {
+      this.stepperArr = this.experience.map((item: Experience, index) => {
         let obj: any = {};
         obj.heading = item.company;
-        obj.sub_heading = `${item.from} - ${item.to}`;
+        obj.sub_heading = item.role;
+        obj.description = item.difference;
+        obj.pointer = this.isMobileDevice ? `${index + 1}` : item.tenure;
         return obj;
       });
     }

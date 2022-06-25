@@ -11,6 +11,7 @@ import { GenericService } from '../../services/generic.service';
 })
 export class EducationComponent implements OnInit {
   @Input() arr: any[] = [];
+  @Input() isMobileDevice = false;
   @Input() title: string = '';
   stepperArr: any[] = [];
   education?: Education[];
@@ -37,11 +38,14 @@ export class EducationComponent implements OnInit {
 
   makeStepperArr() {
     if (this.education && this.education.length > 0) {
-      this.stepperArr = this.education.map((item: Education) => {
+      this.stepperArr = this.education.map((item: Education, index) => {
         let obj: any = {};
         obj.heading = item.course;
         obj.sub_heading = item.institute;
         obj.description = `${item.marks} %`;
+        obj.pointer = this.isMobileDevice
+          ? `${index + 1}`
+          : `${item.from}-${item.to}`;
         return obj;
       });
     }
