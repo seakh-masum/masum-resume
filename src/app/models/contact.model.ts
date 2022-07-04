@@ -4,4 +4,5 @@ export interface Contact {
   value?: string;
   icon: string;
   color?: string;
+  order?: number;
 }

@@ -9,9 +9,11 @@
     padding: 10px 15px;
     border-radius: 8px;
     margin-bottom: 0;
-    b {
+    a {
       color: var(--text-color);
       font-size: 16px;
+      text-decoration: none;
+      font-weight: 500;
     }
     p {
       color: var(--desc-color);

@@ -5,4 +5,5 @@ export interface Education {
   marks?: number;
   from?: string;
   to?: string;
+  order?: string;
 }

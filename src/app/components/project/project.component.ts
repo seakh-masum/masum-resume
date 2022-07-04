@@ -9,6 +9,7 @@ import { Project } from '../../models/project.model';
 export class ProjectComponent {
   @Input() isMobileDevice = false;
   @Input() projects?: Project[];
+  @Input() isDataLoaded = false;
 
   constructor() {}
 }

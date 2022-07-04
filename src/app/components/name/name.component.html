@@ -1,6 +1,29 @@
-<app-card
-  image="https://res.cloudinary.com/ruhi-birthday/image/upload/w_500,f_auto/v1655623018/masum-cv/icons/icon-512x512_zk9nyy.png"
->
-  <h1>Sk Masum</h1>
-  <i>Angular Developer | Mentor</i>
+<app-card type="profile">
+  <div class="container">
+    <div class="container__top flex__column align__center-center">
+      <div class="container__svg">
+        <svg height="250" width="250">
+          <circle cx="125" cy="125" r="110"></circle>
+          <circle
+            cx="125"
+            cy="125"
+            r="110"
+            style="--percent: 50"
+            style.stroke="red"
+          ></circle>
+        </svg>
+        <div class="position__center">
+          <img
+            src="https://res.cloudinary.com/ruhi-birthday/image/upload/w_200,h_200,f_auto/v1655623018/masum-cv/icons/icon-512x512_zk9nyy.png"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="container__bottom">
+      <div class="container__text flex__column align__center-center">
+        <h1>Sk Masum</h1>
+        <i>Angular Developer | Mentor</i>
+      </div>
+    </div>
+  </div>
 </app-card>

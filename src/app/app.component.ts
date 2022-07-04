@@ -16,6 +16,10 @@ export class AppComponent {
   hobbies?: Hobbies[];
   projects?: Project[];
   skills?: Skill[];
+  isContactLoaded = false;
+  isSkillLoaded = false;
+  isProjectLoaded = false;
+  isHobbiesLoaded = false;
 
   constructor(private _generic: GenericService) {
     this.isMobileDevice = _generic.checkDeviceTypeMobile();
@@ -47,6 +51,7 @@ export class AppComponent {
     });
   }
 
+  // Get Contacts
   getContact() {
     this._generic
       .getAll('/contacts')
@@ -56,9 +61,10 @@ export class AppComponent {
           changes.map((c) => {
             let obj = {};
             let data = c.payload.doc.data();
-            data.icon = this.isDarkMode
-              ? data.icon.replace('upload', `upload/${SvgColorUrl.Dark}`)
-              : data.icon.replace('upload', `upload/${SvgColorUrl.Light}`);
+            data.icon = data.icon.replace(
+              'upload',
+              `upload/${SvgColorUrl.Dark}`
+            );
             obj = {
               id: c.payload.doc.id,
               ...data,
@@ -69,9 +75,11 @@ export class AppComponent {
       )
       .subscribe((data: any) => {
         this.contacts = data;
+        this.isContactLoaded = true;
       });
   }
 
+  // Get Hobbies
   getHobbies() {
     this._generic
       .getAll('/hobbies')
@@ -86,6 +94,7 @@ export class AppComponent {
       )
       .subscribe((data) => {
         this.hobbies = data;
+        this.isHobbiesLoaded = true;
       });
   }
 
@@ -104,6 +113,7 @@ export class AppComponent {
       )
       .subscribe((data) => {
         this.projects = data;
+        this.isProjectLoaded = true;
       });
   }
 
@@ -122,6 +132,7 @@ export class AppComponent {
       )
       .subscribe((data) => {
         this.skills = data;
+        this.isSkillLoaded = true;
       });
   }
 }

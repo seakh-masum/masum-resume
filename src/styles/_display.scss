@@ -1,5 +1,4 @@
-
-@mixin flex($dir){
+@mixin flex($dir) {
   @extend .flex;
   flex-direction: $dir;
 }
@@ -17,29 +16,38 @@
   flex: 1 1 $value;
 }
 
+
 .flex {
   display: flex;
+
   &__row {
     @include flex(row);
   }
+
   &__column {
     @include flex(column);
   }
+
   &__wrap {
     flex-wrap: wrap;
   }
+
   &__25 {
     @include flex-basis(25%);
   }
+
   &__33 {
     @include flex-basis(33.333%);
   }
+
   &__50 {
     @include flex-basis(50%);
   }
+
   &__67 {
     @include flex-basis(66.6666%);
   }
+
   &__75 {
     @include flex-basis(75%);
   }
@@ -50,18 +58,23 @@
   &-1 {
     @include gap(0.25rem);
   }
+
   &-2 {
     @include gap(0.5rem);
   }
+
   &-3 {
     @include gap(1rem);
   }
+
   &-4 {
     @include gap(1.5rem);
   }
+
   &-5 {
     @include gap(2rem);
   }
+
   &-6 {
     @include gap(2.5rem);
   }
@@ -71,6 +84,8 @@
   &__center-center {
     @include align(center, center);
   }
+
+  &__start-center {
+    @include align(start, center);
+  }
 }
-
-

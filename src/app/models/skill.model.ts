@@ -4,4 +4,5 @@ export interface Skill {
   value?: any;
   color?: any;
   name?: string;
+  order?: number;
 }

@@ -1,13 +1,15 @@
 <app-card title="Skills">
-  <div class="flex__row flex__wrap">
-    <div *ngFor="let item of skills" class="flex__33 align__center-center">
-      <app-circle-progress
-        [outerColor]="item.color"
-        [imageSrc]="item.icon"
-        [title]="item.name"
-        [percentage]="item.value"
-      >
-      </app-circle-progress>
+  <app-skeleton [isDataLoaded]="isDataLoaded">
+    <div class="flex__row flex__wrap">
+      <div *ngFor="let item of skills" class="flex__33 align__center-center">
+        <app-circle-progress
+          [outerColor]="item.color"
+          [imageSrc]="item.icon"
+          [title]="item.name"
+          [percentage]="item.value"
+        >
+        </app-circle-progress>
+      </div>
     </div>
-  </div>
+  </app-skeleton>
 </app-card>

@@ -7,6 +7,7 @@ import { ExperienceComponent } from './experience/experience.component';
 import { HobbyComponent } from './hobby/hobby.component';
 import { NameComponent } from './name/name.component';
 import { ProjectComponent } from './project/project.component';
+import { SkeletonComponent } from './skeleton/skeleton.component';
 import { SkillComponent } from './skill/skill.component';
 import { StepperComponent } from './stepper/stepper.component';
 
@@ -22,4 +23,5 @@ export const components = [
   ProjectComponent,
   SkillComponent,
   StepperComponent,
+  SkeletonComponent,
 ];

@@ -8,7 +8,6 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { HttpClientModule } from '@angular/common/http';
 import { components } from './components';
-
 @NgModule({
   declarations: [AppComponent, ...components],
   imports: [

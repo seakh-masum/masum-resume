@@ -1,34 +1,41 @@
 <div class="background">
   <div class="flex__row gap-3" [class.flex__column]="isMobileDevice">
     <div class="flex__33">
-      <app-name data-inviewport="fade-rotate"></app-name>
+      <app-name data-inviewport="opacity"></app-name>
       <app-contact
-        data-inviewport="fade-rotate"
+        data-inviewport="opacity"
         [isMobileDevice]="isMobileDevice"
         [isDarkMode]="isDarkMode"
         [contacts]="contacts"
+        [isDataLoaded]="isContactLoaded"
       ></app-contact>
       <app-hobby
-        data-inviewport="fade-rotate"
+        data-inviewport="opacity"
         [isMobileDevice]="isMobileDevice"
         [hobbies]="hobbies"
+        [isDataLoaded]="isHobbiesLoaded"
       ></app-hobby>
-      <app-skill data-inviewport="fade-rotate" [skills]="skills"></app-skill>
+      <app-skill
+        data-inviewport="opacity"
+        [skills]="skills"
+        [isDataLoaded]="isSkillLoaded"
+      ></app-skill>
     </div>
     <div class="flex__67">
-      <app-about-me data-inviewport="fade-rotate"></app-about-me>
+      <app-about-me data-inviewport="opacity"></app-about-me>
       <app-experience
-        data-inviewport="fade-rotate"
+        data-inviewport="opacity"
         [isMobileDevice]="isMobileDevice"
       ></app-experience>
       <app-education
-        data-inviewport="fade-rotate"
+        data-inviewport="opacity"
         [isMobileDevice]="isMobileDevice"
       ></app-education>
       <app-project
-        data-inviewport="fade-rotate"
+        data-inviewport="opacity"
         [isMobileDevice]="isMobileDevice"
         [projects]="projects"
+        [isDataLoaded]="isProjectLoaded"
       ></app-project>
     </div>
   </div>

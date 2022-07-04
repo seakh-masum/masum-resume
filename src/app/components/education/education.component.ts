@@ -15,6 +15,7 @@ export class EducationComponent implements OnInit {
   @Input() title: string = '';
   stepperArr: any[] = [];
   education?: Education[];
+  isDataLoaded = false;
 
   constructor(private _generic: GenericService) {}
 
@@ -32,6 +33,7 @@ export class EducationComponent implements OnInit {
       )
       .subscribe((data) => {
         this.education = data;
+        this.isDataLoaded = true;
         this.makeStepperArr();
       });
   }

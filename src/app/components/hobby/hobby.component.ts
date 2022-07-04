@@ -9,6 +9,7 @@ import { Hobbies } from '../../models/hobbies.model';
 export class HobbyComponent {
   @Input() hobbies?: Hobbies[];
   @Input() isMobileDevice: boolean = false;
+  @Input() isDataLoaded = false;
 
   constructor() {}
 }

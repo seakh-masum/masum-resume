@@ -8,6 +8,7 @@ import { Skill } from '../../models/skill.model';
 })
 export class SkillComponent {
   @Input() skills?: Skill[];
+  @Input() isDataLoaded = false;
 
   constructor() {}
 }

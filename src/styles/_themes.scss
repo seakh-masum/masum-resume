@@ -7,6 +7,7 @@
   --border: 1px solid rgba(255,255,255,0.12);
   --surface-color: #f3f3f3;
   --stepper-color: #1565ff;
+  --skeleton-color: #ebebeb;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,5 +21,6 @@
     --secondary-color: #979797;
     --surface-color: rgba(255,255,255, 0.12);
     --stepper-color: #1565ff;
+    --skeleton-color: #5a5a5a;
   }
 }

@@ -1,12 +1,18 @@
-<div class="circle__container">
+<div class="circle__container flex__column align__center-center">
   <div class="percent">
     <svg height="100" width="100">
       <circle cx="50" cy="50" r="40"></circle>
-      <circle cx="50" cy="50" r="40" style="--percent: {{percentage}};" [style.stroke]="outerColor"></circle>
+      <circle
+        cx="50"
+        cy="50"
+        r="40"
+        style="--percent: {{ percentage }};"
+        [style.stroke]="outerColor"
+      ></circle>
     </svg>
-    <div class="image--container">
-      <img [src]="imageSrc">
+    <div class="position__center">
+      <img [src]="imageSrc" />
     </div>
   </div>
-  <span>{{title | titlecase}}</span>
+  <span>{{ title | titlecase }}</span>
 </div>

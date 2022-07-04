@@ -1,6 +1,8 @@
 <app-card [title]="'Education Qualification'">
-  <app-stepper
-    [data]="stepperArr"
-    [isMobileDevice]="isMobileDevice"
-  ></app-stepper>
+  <app-skeleton [isDataLoaded]="isDataLoaded">
+    <app-stepper
+      [data]="stepperArr"
+      [isMobileDevice]="isMobileDevice"
+    ></app-stepper>
+  </app-skeleton>
 </app-card>

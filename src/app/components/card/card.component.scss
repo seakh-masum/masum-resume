@@ -1,6 +1,6 @@
 .card {
   margin-bottom: 16px;
-  border-radius: 20px !important;
+  border-radius: 20px;
   background: var(--background-color);
   box-shadow: var(--box-shadow);
   transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -8,34 +8,31 @@
   display: block;
   position: relative;
   padding: 16px;
+
   &__header {
     padding: 10px 0;
-    display: flex;
-    flex-direction: row;
   }
 
   &__title {
-    font-family: "Poppins", sans-serif !important;
-    font-size: 22px !important;
-    font-weight: 600 !important;
+    font-family: "Poppins", sans-serif;
+    font-size: 22px;
+    font-weight: 600;
     padding: 0 1rem 0.5rem;
   }
 
   &__content {
+
     p,
     i {
       color: #999;
     }
   }
 
-  &__image {
-    width: calc(100% + 32px);
-    margin: -16px -16px 16px -16px;
-    border-top-left-radius: inherit;
-    border-top-right-radius: inherit;
-  }
-
-  li {
-    margin-bottom: 8px;
+  &.profile {
+    padding: 0;
+    background: linear-gradient(180deg,
+        #9331e0 0%,
+        #34c4f9 99.99%,
+        #2fdaff 100%);
   }
 }

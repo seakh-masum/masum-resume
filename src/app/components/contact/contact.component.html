@@ -1,16 +1,18 @@
-<app-card [title]="'Contacts'">
-  <div class="list">
-    <a
-      class="list__item"
-      [href]="contact.link"
-      target="_blank"
-      *ngFor="let contact of contacts"
-      [style.background]="contact.color"
-    >
-      <img
-        class="list__image"
-        [class.mobile]="isMobileDevice"
-        [src]="contact.icon"
-    /></a>
-  </div>
+<app-card title="Contacts">
+  <app-skeleton [isDataLoaded]="isDataLoaded">
+    <div class="list">
+      <a
+        class="list__item"
+        [href]="contact.link"
+        target="_blank"
+        *ngFor="let contact of contacts"
+        [style.background]="contact.color"
+      >
+        <img
+          class="list__image"
+          [class.mobile]="isMobileDevice"
+          [src]="contact.icon"
+      /></a>
+    </div>
+  </app-skeleton>
 </app-card>

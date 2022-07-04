@@ -1,7 +1,10 @@
-<div class="stepper__container">
+<div class="stepper__container flex__column">
   <div class="stepper" *ngFor="let item of data; let i = index">
-    <div class="stepper__pointer">
-      <div class="stepper__circle" [class.desktop]="!isMobileDevice">
+    <div class="stepper__pointer flex__column">
+      <div
+        class="stepper__circle flex align__center-center"
+        [class.desktop]="!isMobileDevice"
+      >
         {{ item.pointer }}
       </div>
       <div

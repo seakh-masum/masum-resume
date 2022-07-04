@@ -13,6 +13,7 @@ export class ExperienceComponent implements OnInit {
   experience?: Experience[];
   stepperArr: any[] = [];
   @Input() isMobileDevice = false;
+  isDataLoaded = false;
 
   constructor(private _generic: GenericService) {}
 
@@ -60,6 +61,7 @@ export class ExperienceComponent implements OnInit {
             startYear == endYear ? startYear : `${startYear} - ${endYear}`;
           return obj;
         });
+        this.isDataLoaded = true;
         this.makeStepperArr();
       });
   }

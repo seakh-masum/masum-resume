@@ -11,7 +11,7 @@ export class GenericService {
   constructor(private _db: AngularFirestore) {}
 
   getAll(collection: any): AngularFirestoreCollection {
-    return this._db.collection(collection);
+    return this._db.collection(collection, (ref) => ref.orderBy('order'));
   }
   checkDeviceTypeMobile(): boolean {
     return window.innerWidth <= 700 && window.innerHeight <= 900 ? true : false;

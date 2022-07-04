@@ -1,12 +1,14 @@
 <app-card title="Hobbies">
-  <div class="chip__wrapper">
-    <div
-      class="chip"
-      [class.mobile]="isMobileDevice"
-      *ngFor="let item of hobbies"
-      [ngClass]="'color__' + item.color"
-    >
-      <img src="{{ item.icon }}" /> {{ item.name }}
+  <app-skeleton [isDataLoaded]="isDataLoaded">
+    <div class="chip__wrapper flex__row flex__wrap align__start-center">
+      <div
+        class="chip"
+        [class.mobile]="isMobileDevice"
+        *ngFor="let item of hobbies"
+        [ngClass]="'color__' + item.color"
+      >
+        <img src="{{ item.icon }}" /> {{ item.name }}
+      </div>
     </div>
-  </div>
+  </app-skeleton>
 </app-card>

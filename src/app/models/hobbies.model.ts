@@ -3,4 +3,5 @@ export interface Hobbies {
   color?: string;
   name?: string;
   icon?: string;
+  order?: number;
 }

@@ -10,6 +10,7 @@ export class ContactComponent {
   @Input() contacts?: Contact[];
   @Input() isDarkMode: boolean = false;
   @Input() isMobileDevice = false;
+  @Input() isDataLoaded = false;
 
   constructor() {}
 }

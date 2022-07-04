@@ -1,0 +1,12 @@
+<ng-container *ngIf="isDataLoaded; else skeletonBlock">
+  <ng-content></ng-content>
+</ng-container>
+<ng-template #skeletonBlock>
+  <div class="skeleton__container">
+    <span
+      class="skeleton__box"
+      *ngFor="let item of [80, 90, 83, 80]"
+      [style.width.%]="item"
+    ></span>
+  </div>
+</ng-template>

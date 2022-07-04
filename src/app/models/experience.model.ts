@@ -6,4 +6,5 @@ export interface Experience {
   difference?: string;
   tenure?: string;
   role?: string;
+  order?: number;
 }
